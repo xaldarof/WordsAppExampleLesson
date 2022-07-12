@@ -4,64 +4,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="152dp"
-        android:layout_height="152dp"
+    <TextView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_word"
-        android:tint="@color/main_color"
-        app:layout_constraintBottom_toTopOf="@+id/nameEdt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/nameEdt"
-        android:layout_width="match_parent"
-        android:layout_height="?android:actionBarSize"
-        android:layout_margin="36dp"
-        android:background="@drawable/rounded_background_16"
-        android:backgroundTint="@color/white"
-        android:elevation="4dp"
-        android:hint="Ismingiz"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Words !"
+        android:textColor="@color/main_color"
+        android:textSize="52sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.2" />
 
-    <EditText
-        android:id="@+id/emailEdt"
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="?android:actionBarSize"
+        android:layout_height="wrap_content"
         android:layout_margin="36dp"
         android:background="@drawable/rounded_background_16"
         android:backgroundTint="@color/white"
         android:elevation="4dp"
-        android:hint="Email"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameEdt" />
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6">
 
-    <EditText
-        android:id="@+id/passwordEdt"
-        android:layout_width="match_parent"
-        android:layout_height="?android:actionBarSize"
-        android:layout_margin="36dp"
-        android:background="@drawable/rounded_background_16"
-        android:backgroundTint="@color/white"
-        android:elevation="4dp"
-        android:hint="Parol"
-        android:paddingStart="12dp"
-        android:paddingEnd="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailEdt" />
+
+        <EditText
+            android:id="@+id/nameEdt"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/background_outline_black_16"
+            android:hint="Ismingiz"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4" />
+
+        <EditText
+            android:id="@+id/emailEdt"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/background_outline_black_16"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameEdt" />
+
+        <EditText
+            android:id="@+id/passwordEdt"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/background_outline_black_16"
+            android:hint="Parol"
+            android:inputType="textPersonName"
+            android:maxLines="1"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameEdt" />
+
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
         android:layout_margin="36dp"
