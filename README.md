@@ -1,1 +1,1 @@
-![Alt text](QuizApp/image/1.jpg?raw=true "Title")
+![alt text](https://github.com/[xaldarof]/[WordsAppExampleLesson]/blob/[main]/image/1.jpg?raw=true)
