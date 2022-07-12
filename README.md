@@ -5,6 +5,6 @@
   </tr>
   <tr>
     <td><img src="https://github.com/xaldarof/WordsAppExampleLesson/blob/main/image/1.jpg"></td>
-    <td><img src="https://github.com/xaldarof/WordsAppExampleLesson/blob/main/image/1.jpg"></td>
+    <td><img src="https://github.com/xaldarof/WordsAppExampleLesson/blob/main/image/2.jpg"></td>
   </tr>
  </table>
