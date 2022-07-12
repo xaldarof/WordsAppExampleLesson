@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/QuizApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2115" />
+        <entry key="..\:/QuizApp/app/src/main/res/drawable/background_outline_black_16.xml" value="0.2115" />
         <entry key="..\:/QuizApp/app/src/main/res/drawable/rounded_background_16.xml" value="0.2115" />
         <entry key="..\:/QuizApp/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
         <entry key="..\:/QuizApp/app/src/main/res/layout/login_fragment_layout.xml" value="0.22" />
