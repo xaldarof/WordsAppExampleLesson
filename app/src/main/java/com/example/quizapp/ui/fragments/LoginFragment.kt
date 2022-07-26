@@ -20,7 +20,6 @@ import kotlinx.coroutines.launch
 class LoginFragment : Fragment() {
 
     private lateinit var binding: LoginFragmentLayoutBinding
-    private val liveData = MutableLiveData<Int>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,17 +33,8 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        lifecycleScope.launch {
-            liveData.observe(viewLifecycleOwner) {
-                binding.wordsTv.text = it.toString()
-            }
-        }
-
-        var count = 0
         binding.registerTv.setOnClickListener {
-            count++
-            liveData.value = count
-//            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
         }
     }
 }
