@@ -10,7 +10,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.quizapp.common.BaseResult
 import com.example.quizapp.common.str
 import com.example.quizapp.databinding.RegisterFragmentLayoutBinding
-import com.example.quizapp.domain.model.UserRegisterRequest
+import com.example.quizapp.domain.model.auth.UserRegisterRequest
 import com.example.quizapp.domain.respositories.AuthRepository
 import kotlinx.coroutines.launch
 
@@ -47,7 +47,7 @@ class RegisterFragment : Fragment() {
                     binding.passwordEdt.str))
 
                 if (result is BaseResult.Success) {
-                    Toast.makeText(requireContext(), "Sucess", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Success", Toast.LENGTH_SHORT).show()
                 } else {
                     Toast.makeText(requireContext(), "Connection error !", Toast.LENGTH_SHORT)
                         .show()

@@ -13,7 +13,7 @@
         android:textColor="@color/main_color"
         android:textSize="52sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -28,13 +28,13 @@
         android:backgroundTint="@color/white"
         android:elevation="4dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/registerBtn"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.6">
 
 
         <EditText
-            android:id="@+id/nameEdt"
+            android:id="@+id/emailEdt"
             android:layout_width="match_parent"
             android:layout_height="?android:actionBarSize"
             android:layout_marginStart="36dp"
@@ -55,7 +55,7 @@
             app:layout_constraintVertical_bias="0.4" />
 
         <EditText
-            android:id="@+id/emailEdt"
+            android:id="@+id/passwordEdt"
             android:layout_width="match_parent"
             android:layout_height="?android:actionBarSize"
             android:layout_marginStart="36dp"
@@ -69,7 +69,7 @@
             android:paddingEnd="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameEdt" />
+            app:layout_constraintTop_toBottomOf="@+id/emailEdt" />
 
 
     </LinearLayout>
@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/registerBtn"
+        android:id="@+id/loginBtn"
         android:layout_width="match_parent"
         android:layout_height="?android:actionBarSize"
         android:layout_margin="36dp"

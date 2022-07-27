@@ -1,4 +1,4 @@
-package com.example.quizapp.domain.model
+package com.example.quizapp.domain.model.auth
 
 /**
  * @Author: Temur

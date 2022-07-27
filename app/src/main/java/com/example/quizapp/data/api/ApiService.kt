@@ -1,6 +1,7 @@
 package com.example.quizapp.data.api
 
-import com.example.quizapp.domain.model.UserRegisterRequest
+import com.example.quizapp.domain.model.auth.UserLoginRequest
+import com.example.quizapp.domain.model.auth.UserRegisterRequest
 import retrofit2.http.Body
 import retrofit2.http.POST
 
@@ -11,6 +12,9 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-    @POST("/register")
+    @POST("register")
     suspend fun register(@Body userRegisterRequest: UserRegisterRequest):String
+
+    @POST("login")
+    suspend fun login(@Body userLoginRequest: UserLoginRequest): String
 }

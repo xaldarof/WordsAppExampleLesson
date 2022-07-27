@@ -3,7 +3,8 @@ package com.example.quizapp.domain.respositories
 import com.example.quizapp.common.BaseResult
 import com.example.quizapp.data.api.ApiClient
 import com.example.quizapp.data.api.ApiService
-import com.example.quizapp.domain.model.UserRegisterRequest
+import com.example.quizapp.domain.model.auth.UserLoginRequest
+import com.example.quizapp.domain.model.auth.UserRegisterRequest
 import retrofit2.create
 
 /**
@@ -18,6 +19,16 @@ class AuthRepository {
     suspend fun register(userRegisterRequest: UserRegisterRequest): BaseResult<String> {
         return try {
             var response = client?.register(userRegisterRequest)
+
+            BaseResult.Success("Success")
+        } catch (e: Exception) {
+            BaseResult.Error(e.printStackTrace().toString())
+        }
+    }
+
+    suspend fun login(userLoginRequest: UserLoginRequest): BaseResult<String> {
+        return try {
+            var response = client?.login(userLoginRequest)
 
             BaseResult.Success("Success")
         } catch (e: Exception) {

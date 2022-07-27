@@ -9,7 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.quizapp.common.str
 import com.example.quizapp.databinding.LoginFragmentLayoutBinding
+import com.example.quizapp.domain.model.auth.UserLoginRequest
+import com.example.quizapp.domain.respositories.AuthRepository
 import kotlinx.coroutines.launch
 
 /**
@@ -20,6 +23,7 @@ import kotlinx.coroutines.launch
 class LoginFragment : Fragment() {
 
     private lateinit var binding: LoginFragmentLayoutBinding
+    private lateinit var authRepository: AuthRepository
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,9 +36,20 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        authRepository = AuthRepository()
+        initActions()
+    }
 
+    private fun initActions() {
         binding.registerTv.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
+        }
+
+        binding.loginBtn.setOnClickListener {
+            lifecycleScope.launch {
+                authRepository.login(UserLoginRequest(binding.emailEdt.str,
+                    binding.passwordEdt.str))
+            }
         }
     }
 }
