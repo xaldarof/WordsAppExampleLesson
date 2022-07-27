@@ -47,8 +47,8 @@ class LoginFragment : Fragment() {
 
         binding.loginBtn.setOnClickListener {
             lifecycleScope.launch {
-                authRepository.login(UserLoginRequest(binding.emailEdt.str,
-                    binding.passwordEdt.str))
+                authRepository.login(UserLoginRequest(binding.emailLoginEdt.str,
+                    binding.passwordLoginEdt.str))
             }
         }
     }

@@ -34,7 +34,7 @@
 
 
         <EditText
-            android:id="@+id/emailEdt"
+            android:id="@+id/emailLoginEdt"
             android:layout_width="match_parent"
             android:layout_height="?android:actionBarSize"
             android:layout_marginStart="36dp"
@@ -47,7 +47,7 @@
             android:maxLines="1"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
             app:layout_constraintVertical_bias="0.4" />
 
         <EditText
-            android:id="@+id/passwordEdt"
+            android:id="@+id/passwordLoginEdt"
             android:layout_width="match_parent"
             android:layout_height="?android:actionBarSize"
             android:layout_marginStart="36dp"
@@ -64,7 +64,7 @@
             android:background="@drawable/background_outline_black_16"
             android:hint="Parol"
             android:maxLines="1"
-            android:inputType="textPersonName"
+            android:inputType="textPassword"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             app:layout_constraintEnd_toEndOf="parent"
