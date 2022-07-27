@@ -11,6 +11,6 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-    @POST("/")
+    @POST("/register")
     suspend fun register(@Body userRegisterRequest: UserRegisterRequest):String
 }
